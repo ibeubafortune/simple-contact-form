@@ -1,0 +1,259 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: hsl(148, 38%, 91%);
+  font-family: Karla;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form {
+  width: 45%;
+  height: 80%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 0.5% 2.5% 5% 2.5%;
+}
+
+h2 {
+  color: hsl(169, 82%, 27%);
+  font-size: 1.3rem;
+}
+
+input,
+.general-enquiry,
+.support-request {
+  height: 3%;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+input:hover,
+.submit-btn,
+.consent-label,
+#consent,
+.query-type-div > label {
+  cursor: pointer;
+}
+
+input:focus,
+textarea:focus,
+input:hover{
+  outline-width: 0;
+  border: 1.5px solid hsl(169, 82%, 27%);
+}
+
+
+.active {
+  outline: 0;
+  border: 1.5px solid hsl(169, 82%, 27%);
+  background-color: hsl(148, 38%, 91%);
+}
+
+.query-type-div {
+  display: flex;
+  min-width: max-content;
+  width: 100%;
+
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5% 0;
+}
+
+/* .query-type-label{
+  background: black;
+} */
+
+.general-enquiry,
+.support-request {
+  display: flex;
+  width: inherit;
+  height: inherit;
+  padding: 3%;
+}
+
+#general-enquiry,
+#support-request,
+.first-name,
+.query-type-div:not(.support-request) {
+  margin-right: 10px;
+}
+label,
+p {
+  font-size: 0.9rem;
+  color: hsl(169, 82%, 27%);
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+.contact-form > * {
+  margin-bottom: 10px;
+}
+
+.names,
+.query-type {
+  display: flex;
+}
+
+.names {
+  justify-content: space-evenly;
+}
+
+#first-name,
+#last-name {
+  padding: 5% 4%;
+}
+
+#email {
+  padding: 1.5%;
+}
+
+.first-name,
+.last-name {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.email > * {
+  display: block;
+}
+
+.email {
+  margin-top: -10px;
+}
+
+.email,
+.submit-btn {
+  width: 100%;
+}
+
+#email {
+  width: 96%;
+}
+
+.message-p {
+  margin-bottom: 5px;
+}
+
+#message {
+  margin-top: 0;
+  border-radius: 5px;
+  width: 95%;
+  height: 6vw;
+  padding: 10px;
+  resize: none;
+}
+
+.submit-btn {
+  display: flex;
+  font-family: Karla;
+  color: hsl(0, 0%, 100%);
+  margin-top: 3%;
+
+  height: 8vh;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  background-color: hsl(169, 82%, 27%);
+}
+
+.submit-btn:hover {
+  filter: grayscale(80%);
+}
+
+.consent {
+  display: flex;
+  height: fit-content;
+  align-items: center;
+  
+}
+
+
+
+#consent {
+  align-self: center;
+  margin-right: 15px;
+}
+
+.validation-message {
+  font-size: 5px;
+  color: red;
+}
+
+.green {
+  background-color: green;
+  outline: green;
+}
+
+/* RESPONSIVE WEB DESIGN */
+@media screen and (max-width: 920px) {
+  .names,
+  .query-type {
+    display: block;
+  }
+
+  .contact-form {
+    width: 85vw;
+    min-height: fit-content;
+    max-height: 90vh;
+    padding: 0 4%;
+  }
+  #email {
+    height: 30px;
+    width: 97%;
+    
+  }
+  .email{
+    margin-top: 2px;
+  }
+  .consent {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #message {
+    width: 95%;
+    height: 25vh;
+  }
+  .first-name,
+  .last-name {
+    width: 100%;
+  }
+  #first-name,
+  #last-name {
+    padding: 1% 1.5%;
+    height: 30px;
+  }
+
+  label:not(.query-type-label) {
+    margin: 10px 0;
+  }
+  .submit-btn{
+    height: 4vh;
+  }
+}
+
+@media screen and (max-height: 700px){
+  .container {
+    height: 90%;
+  }
+  .contact-form {
+    min-height:fit-content;
+    margin: 5%;
+  }
+  .consent {
+    width: max-content;
+  }
+}
